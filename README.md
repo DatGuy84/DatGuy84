@@ -1,4 +1,4 @@
-<h1>Hi, I'm Sinjin! <br/><a href="https://github.com/DatGuy84">Programmer</a>, <a href="https://www.linkedin.com/in/sinjin-torga-eide-674185297">Cybersecurity Professional</a>, </h1>
+<h1>Hi, I'm Sinjin! <br/><a href="https://github.com/DatGuy84">Programmer</a>, <a href="https://www.linkedin.com/in/sinjin-torga-eide-674185297">Cybersecurity Student</a>, </h1>
 
 <h2>👨‍💻 Cybersecurity Projects</h2>
 
