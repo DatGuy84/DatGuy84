@@ -1,6 +1,7 @@
 <h1>Hi, I'm Sinjin! <br/> <a href="https://www.linkedin.com/in/sinjin-torga-eide-674185297">Cybersecurity Student</a> </h1>
 
 <h2>Certifications</h2>
+
 - Comptia Security+
 - Comptia Network+
 - Splunk Core Certified User (WIP)
@@ -10,6 +11,7 @@
 - [Active Directory Home Lab](https://github.com/DatGuy84/ActiveDirectoryLab)
 
 <h2>CTFs</h2>
+
 - Completed Overthewire: Bandit
 - Completed PicoPrimer
 
