@@ -3,7 +3,7 @@
 <h2>Certifications</h2>
 
 - Comptia Security+
-- Comptia Network+
+- Comptia Network+l
 - Splunk Core Certified User (WIP)
 
 <h2>👨‍💻 Cybersecurity Projects</h2>
@@ -13,7 +13,7 @@
 <h2>CTFs</h2>
 
 - Completed Overthewire: Bandit
-- Completed PicoPrimer
+- Patriot CTF 2025
 
 <h2> 🤳 Connect with me:</h2>
 
