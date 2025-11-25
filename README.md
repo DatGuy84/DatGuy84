@@ -3,7 +3,7 @@
 <h2>Certifications</h2>
 
 - Comptia Security+
-- Comptia Network+l
+- Comptia Network+
 - Splunk Core Certified User (WIP)
 
 <h2>👨‍💻 Cybersecurity Projects</h2>
