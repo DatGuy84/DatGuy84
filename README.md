@@ -5,7 +5,6 @@
 - Comptia Security+
 - Comptia Network+
 - Splunk Core Certified User
-- Microsoft Certified: Azure Fundamentals
 
 <h2>👨‍💻 Cybersecurity Projects</h2>
 
