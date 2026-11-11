@@ -10,6 +10,7 @@
 
 - [Active Directory Home Lab](https://github.com/DatGuy84/ActiveDirectoryLab)
 - [Vulnerability Management Program Implementation](https://github.com/DatGuy84/vulnerability-management-program)
+- [PHP2Shell Threat Hunt](https://github.com/DatGuy84/PHP-Threat-Hunt)
 
 <h2>CTFs</h2>
 
