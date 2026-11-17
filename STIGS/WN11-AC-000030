@@ -1,0 +1,42 @@
+
+<#
+.SYNOPSIS
+    This PowerShell script ensures that the Windows 11
+    minimum password age is configured to at least 1 day.
+
+.NOTES
+    Author          : Sinjin Torga-Eide
+    LinkedIn        : https://www.linkedin.com/in/sinjin-torga-eide-674185297
+    GitHub          : https://github.com/DatGuy84
+    Date Created    : 2026-11-17
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN11-AC-000030
+    Vulnerability ID: V-253302
+    Severity        : Medium (CAT II)
+    Documentation   : https://stigaview.com/products/win11/v2r7/WN11-AC-000030/
+
+.TESTED ON
+    Date(s) Tested  : 2026-11-17
+    Tested By       : Sinjin Torga-Eide
+    Systems Tested  : Windows 11 VM (intended)
+    PowerShell Ver. : Not recorded
+
+.USAGE
+    Run PowerShell as Administrator.
+
+    Example:
+    PS C:\> .\WN11-AC-000030.ps1
+
+    This script configures the minimum password age
+    to 1 day and verifies the configuration.
+#>
+
+# STIG WN11-AC-000030 Remediation
+
+# Configure minimum password age to 1 day
+net accounts /minpwage:1
+
+# Verify minimum password age policy
+net accounts
