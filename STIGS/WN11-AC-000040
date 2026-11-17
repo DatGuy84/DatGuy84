@@ -1,0 +1,62 @@
+
+<#
+.SYNOPSIS
+    This PowerShell script ensures that Windows 11
+    password complexity requirements are enabled
+    through the Local Security Policy.
+
+.NOTES
+    Author          : Sinjin Torga-Eide
+    LinkedIn        : https://www.linkedin.com/in/sinjin-torga-eide-674185297
+    GitHub          : https://github.com/DatGuy84
+    Date Created    : 2026-11-17
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN11-AC-000040
+    Vulnerability ID: V-253304
+    Severity        : Medium (CAT II)
+    Documentation   : https://www.stigaview.com/products/win11/v2r8/WN11-AC-000040/
+
+.TESTED ON
+    Date(s) Tested  : 2026-11-17
+    Tested By       : Sinjin Torga-Eide
+    Systems Tested  : Windows 11 VM
+    PowerShell Ver. : 5.1
+
+.USAGE
+    Run PowerShell as Administrator.
+
+    Example:
+    PS C:\> .\WN11-AC-000040.ps1
+
+    This script enables password complexity requirements
+    and verifies the configuration using secedit.
+#>
+
+# STIG WN11-AC-000040 Remediation
+
+# Export the current local security policy
+secedit /export /cfg "$env:TEMP\secpol.cfg" /areas SECURITYPOLICY
+
+# Read the exported configuration
+$content = Get-Content "$env:TEMP\secpol.cfg"
+
+# Enable password complexity
+$content = $content -replace "PasswordComplexity\s*=\s*0", "PasswordComplexity = 1"
+
+# Save the updated configuration
+$content | Set-Content "$env:TEMP\secpol.cfg" -Encoding Unicode
+
+# Apply the updated security policy
+secedit /configure /db "$env:TEMP\secpol.sdb" `
+    /cfg "$env:TEMP\secpol.cfg" /areas SECURITYPOLICY
+
+# Refresh Group Policy
+gpupdate /force
+
+# Export security policy for verification
+secedit /export /cfg "$env:TEMP\verify.cfg" /areas SECURITYPOLICY
+
+# Verify password complexity configuration
+Select-String -Path "$env:TEMP\verify.cfg" -Pattern "PasswordComplexity"
