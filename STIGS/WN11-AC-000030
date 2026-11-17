@@ -21,7 +21,7 @@
     Date(s) Tested  : 2026-11-17
     Tested By       : Sinjin Torga-Eide
     Systems Tested  : Windows 11 VM (intended)
-    PowerShell Ver. : Not recorded
+    PowerShell Ver. : 5.1
 
 .USAGE
     Run PowerShell as Administrator.
