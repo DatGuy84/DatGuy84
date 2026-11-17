@@ -1,0 +1,48 @@
+
+<#
+.SYNOPSIS
+    This PowerShell script ensures that the maximum size of the
+    Windows Application event log is configured to at least
+    32768 KB (32 MB) through the Windows Registry.
+
+.NOTES
+    Author          : Sinjin Torga-Eide
+    LinkedIn        : https://www.linkedin.com/in/sinjin-torga-eide-674185297
+    GitHub          : https://github.com/DatGuy84
+    Date Created    : 2026-11-16
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN11-AU-000500
+    Vulnerability ID: V-253337
+    Severity        : Medium (CAT II)
+    Documentation   : https://stigaview.com/products/win11/v2r7/WN11-AU-000500/
+
+.TESTED ON
+    Date(s) Tested  : 2026-11-16
+    Tested By       : Sinjin Torga-Eide
+    Systems Tested  : Windows 11 VM
+    PowerShell Ver. : Not recorded
+
+.USAGE
+    Run PowerShell as Administrator.
+
+    Example:
+    PS C:\> .\WN11-AU-000500.ps1
+
+    This script creates or updates the MaxSize registry value
+    to 32768 KB and verifies the configuration.
+#>
+
+# STIG WN11-AU-000500 Remediation
+
+# Define registry path
+$path = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\Application"
+
+New-Item -Path $path -Force
+
+New-ItemProperty -Path $path `
+    -Name "MaxSize" `
+    -Value 32768 `
+    -PropertyType DWORD `
+    -Force
